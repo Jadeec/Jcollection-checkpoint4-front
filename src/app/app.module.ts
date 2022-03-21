@@ -14,6 +14,7 @@ import { VinylComponent } from './vinyl/vinyl.component';
 import { ModifyFormComponent } from './forms/modify-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { CdComponent } from './cd/cd.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     CdsComponent,
     DvdsComponent,
     VinylComponent,
-    ModifyFormComponent
+    ModifyFormComponent,
+    CdComponent
   ],
   imports: [
     BrowserModule,

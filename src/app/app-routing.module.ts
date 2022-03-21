@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'cds', component: CdsComponent},
   {path: 'dvds', component: DvdsComponent},
   {path: 'vinyl', component: VinylComponent},
-  {path: 'modifyVinyl', component: ModifyFormComponent},
+  {path: 'modifyVinyl', component: ModifyFormComponent}
 ];
 
 @NgModule({
