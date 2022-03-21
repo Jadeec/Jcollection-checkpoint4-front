@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { VinylsComponent } from './vinyl/vinyls.component';
 import { CdsComponent } from './cd/cds.component';
 import { DvdsComponent } from './dvd/dvds.component';
@@ -14,8 +14,8 @@ import { VinylComponent } from './vinyl/vinyl.component';
 import { ModifyFormComponent } from './forms/modify-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { CdComponent } from './cd/cd.component';
-
+import { CardComponent } from './card/card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { CdComponent } from './cd/cd.component';
     DvdsComponent,
     VinylComponent,
     ModifyFormComponent,
-    CdComponent
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,8 +36,9 @@ import { CdComponent } from './cd/cd.component';
     MatIconModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

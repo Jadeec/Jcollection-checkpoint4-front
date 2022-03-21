@@ -3,8 +3,10 @@ import { Media } from './Media.model';
 export class Type {
   private _name: string;
   private _medias: Media | null;
+  private _id: number;
 
-  constructor(name: string, medias: Media) {
+  constructor(name: string, medias: Media, id: number) {
+    this._id = id;
     this._name = name;
     this._medias = medias;
   }
@@ -39,5 +41,21 @@ export class Type {
    */
   public set medias(value: Media | null) {
     this._medias = value;
+  }
+
+  /**
+   * Setter id
+   * @param {number } value
+   */
+  public set id(value: number) {
+    this._id = value;
+  }
+
+  /**
+   * Getter id
+   * @return {number}
+   */
+  public get id(): number {
+    return this._id;
   }
 }
