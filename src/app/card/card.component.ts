@@ -7,13 +7,15 @@ import { Media } from '../shared/models/Media.model';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() cd:any
+  @Input() cd!: Media
+  @Input() vinyl!: Media
   constructor() { 
-  
+
+
   }
 
   ngOnInit(): void {
-    console.log(this.cd);
+  
   }
 
 }

@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Media } from '../shared/models/Media.model';
+import { MediaService } from '../shared/services/media.service';
 
 @Component({
   selector: 'app-vinyl',
   templateUrl: './vinyl.component.html',
-  styleUrls: ['./vinyl.component.css']
+  styleUrls: ['./vinyl.component.css'],
 })
 export class VinylComponent implements OnInit {
+  vinyl !: Media
+  constructor(private mediaService : MediaService, private router: Router) {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  modify(){
+    this.router.navigate(['/', 'modifyVinyl']);
   }
+  delete(id :number){
+    this.mediaService.deleteMedia(id).subscribe((res) => {
+      this.router.navigate(['/', 'vinyls'])
+    });
+  }
+
 
 }
