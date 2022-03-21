@@ -7,12 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import {MatIconModule} from '@angular/material/icon';
+import { VinylsComponent } from './vinyl/vinyls.component';
+import { CdsComponent } from './cd/cds.component';
+import { DvdsComponent } from './dvd/dvds.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    VinylsComponent,
+    CdsComponent,
+    DvdsComponent
   ],
   imports: [
     BrowserModule,
