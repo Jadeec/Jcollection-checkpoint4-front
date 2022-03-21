@@ -1,0 +1,54 @@
+
+a {
+  color: black;
+}
+
+
+.title {
+  display: block;
+  color: white;
+  font-family: "Play", sans-serif;
+  font-size: 40px;
+  
+}
+
+.whiteBar {
+    background-color: white;
+
+}
+
+.black-icon {
+  font-size: 30px;
+  color: black;
+}
+.nav-link {
+  font-size: 1.5em;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    min-width: 376px;
+  }
+  
+
+  @media screen and (min-width: 768px) {
+    .btn-outline-danger {
+      color: black;
+      outline: none;
+    }
+    .btn {
+      border: solid 2px #fdfdfd;
+    }
+
+    .nav-link {
+      font-size: 1em;
+    }
+    .nav-item:hover {
+      text-decoration: underline;
+    }
+    ul {
+      border-bottom: none;
+    }
+  }
+}
