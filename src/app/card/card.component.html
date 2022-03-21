@@ -1,8 +1,10 @@
 <div class="container">
+  <a [routerLink]="['/']">
   <div class="row mt-4">
     <img src="./assets/img/vinyl.jpg" alt="vinyl cover" />
   </div>
   <div class="row mt-2">
-    <p><span style="color: #edbf1c"> Frank ocean </span> - Blond</p>
+    <p><span style="color: #edbf1c"> {{vinyl.artist}} </span> - {{vinyl.title}}</p>
   </div>
+</a>
 </div>
