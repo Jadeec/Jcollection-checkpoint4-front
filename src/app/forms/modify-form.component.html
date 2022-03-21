@@ -1,0 +1,53 @@
+<h1>Modification</h1>
+
+<form [formGroup]="modifyForm" class="container d-flex flex-column">
+  <div class="form mx-auto">
+    <div class="col-12 mb-2 mt-3">
+      <label for="artist"> Artist </label>
+      <div>
+        <input
+          type="text"
+          name="artist"
+          formControlName="artist"
+          class="artist form-control"
+        />
+      </div>
+      <div class="col-12 mb-2 mt-3">
+        <label for="titre"> Titre </label>
+      </div>
+      <div>
+        <input type="text" name="title" formControlName="title" class="title form-control" />
+      </div>
+      <div class="col-12 mb-2 mt-3">
+        <label for="genre"> Genre </label>
+      </div>
+
+      <input type="text" name="genre" formControlName="genre" class="genre form-control" />
+
+      <div class="col-12 mb-2 mt-3">
+        <label for="publicationDate"> PublicationDate </label>
+      </div>
+      <input
+        type="text"
+        name="publicationDate"
+        formControlName="publicationDate"
+        class=" form-control publicationDate mb-4"
+      />
+    </div>
+    <div>
+      <div class="col-12 mb-2 mt-3">
+        <label for="description"> PublicationDate </label>
+      </div>
+      <input
+        type="text"
+        name="description"
+        formControlName="description"
+        class=" form-control description mb-4"
+      />
+    </div>
+  </div>
+</form>
+
+<div class="footer d-flex justify-content-center">
+  <button class="saveBtn">Enregistrer</button>
+</div>

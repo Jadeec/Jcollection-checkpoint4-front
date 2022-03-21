@@ -10,6 +10,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { VinylsComponent } from './vinyl/vinyls.component';
 import { CdsComponent } from './cd/cds.component';
 import { DvdsComponent } from './dvd/dvds.component';
+import { VinylComponent } from './vinyl/vinyl.component';
+import { ModifyFormComponent } from './forms/modify-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +23,17 @@ import { DvdsComponent } from './dvd/dvds.component';
     HomeComponent,
     VinylsComponent,
     CdsComponent,
-    DvdsComponent
+    DvdsComponent,
+    VinylComponent,
+    ModifyFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
