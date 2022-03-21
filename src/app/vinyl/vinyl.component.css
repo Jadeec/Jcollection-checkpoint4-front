@@ -1,0 +1,30 @@
+img {
+  height: 10.625rem;
+  width: 10.625rem;
+}
+
+button {
+    border: #edbf1c 1px solid;
+    background-color: transparent;
+    color: #edbf1c;
+    border-radius: 10px;
+    margin-right: 0.625rem;
+    padding: 2%;
+}
+
+.artistInfo {
+  margin-left: 1.25rem;
+}
+
+.artist {
+  color: #edbf1c;
+}
+
+.title,
+.artist {
+  font-family: "Play", sans-serif;
+}
+
+.albumInfo {
+    font-size: 15px;
+}

@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { VinylsComponent } from './vinyl/vinyls.component';
 import { CdsComponent } from './cd/cds.component';
 import { DvdsComponent } from './dvd/dvds.component';
+import { VinylComponent } from './vinyl/vinyl.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DvdsComponent } from './dvd/dvds.component';
     HomeComponent,
     VinylsComponent,
     CdsComponent,
-    DvdsComponent
+    DvdsComponent,
+    VinylComponent
   ],
   imports: [
     BrowserModule,

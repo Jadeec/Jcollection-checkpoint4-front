@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CdsComponent } from './cd/cds.component';
 import { DvdsComponent } from './dvd/dvds.component';
 import { HomeComponent } from './home/home.component';
+import { VinylComponent } from './vinyl/vinyl.component';
 import { VinylsComponent } from './vinyl/vinyls.component';
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'vinyls', component: VinylsComponent},
   {path: 'cds', component: CdsComponent},
   {path: 'dvds', component: DvdsComponent},
+  {path: 'vinyl', component: VinylComponent},
 ];
 
 @NgModule({
