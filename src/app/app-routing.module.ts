@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CardComponent } from './card/card.component';
 import { CdsComponent } from './cd/cds.component';
 import { DvdsComponent } from './dvd/dvds.component';
 import { ModifyFormComponent } from './forms/modify-form.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'dvds', component: DvdsComponent},
   {path: 'vinyl', component: VinylComponent},
   {path: 'modifyVinyl', component: ModifyFormComponent},
+  {path: 'cd', component: CardComponent}
 ];
 
 @NgModule({
