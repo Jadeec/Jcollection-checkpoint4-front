@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Media } from '../shared/models/Media.model';
 import { MediaService } from '../shared/services/media.service';
 
+
 @Component({
   selector: 'app-cds',
   templateUrl: './cds.component.html',
@@ -15,6 +16,8 @@ export class CdsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.mediaService.getMedias(2).subscribe((medias: Media[]) => {
+      this.cds = medias;
+     });
   }
 }

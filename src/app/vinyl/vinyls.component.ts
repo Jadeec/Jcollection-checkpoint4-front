@@ -15,16 +15,13 @@ export class VinylsComponent implements OnInit {
     this.vinyls = [];
   }
   ngOnInit(): void {
-    this.mediaService.getMedias().subscribe((medias: Media[]) => {
-      medias.forEach((media: Media) => {
-        if (media.type.id == 1) {
-          this.vinyls.push(media);
-        }
-      });
+    this.mediaService.getMedias(1).subscribe((medias: Media[]) => {
+     this.vinyls = medias;
+     
     });
   }
 
   addVinyl(){
-    this.router.navigate(['/', 'modifyVinyl'])
+    this.router.navigate(['/', 'createMedia'])
   }
 }

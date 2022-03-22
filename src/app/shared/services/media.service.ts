@@ -33,12 +33,12 @@ export class MediaService {
   }
 
   //get all medias
-  getMedias(): Observable<Media[]> {
-    return this.http.get<Media[]>(this.urlBack + 'medias');
+  getMedias(id : number): Observable<Media[]> {
+    return this.http.get<Media[]>(this.urlBack + 'medias/type/'+ id);
   }
 
   //get a media
-  getMedia(id: number): Observable<Media> {
+  getMedia(id: string): Observable<Media> {
     return this.http.get<Media>(this.urlBack + 'medias/' + id);
   }
 

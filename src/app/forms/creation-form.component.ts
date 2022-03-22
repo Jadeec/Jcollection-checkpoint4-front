@@ -2,16 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Media } from '../shared/models/Media.model';
-import { Type } from '../shared/models/Type.model';
 import { MediaService } from '../shared/services/media.service';
 
-
 @Component({
-  selector: 'app-modify-form',
-  templateUrl: './modify-form.component.html',
-  styleUrls: ['./modify-form.component.css']
+  selector: 'app-creation-form',
+  templateUrl: './creation-form.component.html',
+  styleUrls: ['./creation-form.component.css']
 })
-export class ModifyFormComponent implements OnInit {
+export class CreationFormComponent implements OnInit {
+
   modifyForm : FormGroup
   artist!: string;
   title!: string;
@@ -61,4 +60,5 @@ export class ModifyFormComponent implements OnInit {
     })
     
   }
+
 }
