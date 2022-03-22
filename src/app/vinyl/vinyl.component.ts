@@ -31,7 +31,7 @@ export class VinylComponent implements OnInit {
   }
 
   delete(id: number) {
-    this.mediaService.deleteMedia(id).subscribe((res) => {
+    this.mediaService.deleteMedia(id).subscribe(() => {
       this.router.navigate(['/', 'vinyls']);
     });
   }

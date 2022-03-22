@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Media } from '../shared/models/Media.model';
 import { MediaService } from '../shared/services/media.service';
 
@@ -9,11 +10,15 @@ import { MediaService } from '../shared/services/media.service';
 })
 export class DvdsComponent implements OnInit {
   dvds!: Media[];
-  constructor(private mediaService: MediaService) {}
+  constructor(private mediaService: MediaService, private router: Router) {}
 
   ngOnInit(): void {
     this.mediaService.getMedias(3).subscribe((medias: Media[]) => {
       this.dvds = medias;
     });
+  }
+
+  addDvd(){
+    this.router.navigate(['/', 'createMedia'])
   }
 }

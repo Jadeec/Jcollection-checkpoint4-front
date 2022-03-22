@@ -45,15 +45,15 @@ export class MediaService {
   //modify media
   modifyMedia(
     id: number,
-    title: string,
     artist: string,
+    title: string,
     genre: string,
     publishingDate: Date,
     description: string
   ): Observable<Media> {
     return this.http.put<Media>(this.urlBack + 'medias/' + id, {
-      title: title,
       artist: artist,
+      title: title,
       genre: genre,
       publishingDate: publishingDate,
       description: description,

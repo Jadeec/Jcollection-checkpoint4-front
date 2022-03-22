@@ -42,7 +42,7 @@ export class CreationFormComponent implements OnInit {
     this.genre = this.modifyForm.controls.genre.value;
     this.publicationDate = this.modifyForm.controls.publicationDate.value;
     this.description = this.modifyForm.controls.description.value;
-    this.type =this.modifyForm.controls.type.value;
+    this.type =this.modifyForm.controls.type.value.toLowerCase();
 
     if(this.type.match("vinyl") ){
       this.typeId = 1;
@@ -51,12 +51,20 @@ export class CreationFormComponent implements OnInit {
     } else if (this.type.match("dvd")){
       this.typeId = 3
     }
-    this.mediaService.postMedia(this.artist,this.title,this.genre,this.publicationDate,this.description,this.typeId).subscribe((media: Media) => {
-      this.router.navigate(['/', 'vinyls'])
+
+    
+    this.mediaService.postMedia(this.artist,this.title,this.genre,this.publicationDate,this.description,this.typeId).subscribe(() => {
+      if (this.typeId == 1) {
+        this.router.navigate(['/', 'vinyls']);
+      } else if (this.typeId == 2) {
+        this.router.navigate(['/', 'cds']);
+      } else if (this.typeId == 3) {
+        this.router.navigate(['/', 'dvds']);
+      }
 
     },
     (error) => {
-      alert("Une ereur est survenue, veillez verifier que la valeur du champ 'type' est bien en minuscule")
+      alert("Une ereur est survenue, veillez recommencer")
     })
     
   }

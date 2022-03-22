@@ -20,7 +20,7 @@ export class ModifyFormComponent implements OnInit {
   type!: string;
   typeId!: number;
   currentMedia!: Media;
-  date!: string |null;
+  date!: string | null;
 
   constructor(
     private fb: FormBuilder,
@@ -59,22 +59,27 @@ export class ModifyFormComponent implements OnInit {
   modifyMedia() {
     this.artist = this.modifyForm.controls.artist.value;
     this.title = this.modifyForm.controls.title.value;
-    console.log(this.title);
     this.genre = this.modifyForm.controls.genre.value;
     this.publicationDate = this.modifyForm.controls.publicationDate.value;
     this.description = this.modifyForm.controls.description.value;
     this.mediaService
       .modifyMedia(
         this.currentMedia.id,
-        this.artist,
         this.title,
+        this.artist,
         this.genre,
         this.publicationDate,
         this.description
       )
-      .subscribe((media: Media) => {
-        console.log(media);
-        this.router.navigate(['/', 'vinyls']);
+      .subscribe(() => {
+
+        if (this.currentMedia.type.name.includes('vinyl')) {
+          this.router.navigate(['/', 'vinyls']);
+        } else if (this.currentMedia.type.name.includes('cd')) {
+          this.router.navigate(['/', 'cds']);
+        } else if (this.currentMedia.type.name.includes('dvd')) {
+          this.router.navigate(['/', 'dvds']);
+        }
       });
   }
 }
