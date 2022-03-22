@@ -19,6 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreationFormComponent } from './forms/creation-form.component';
 import { CdComponent } from './cd/cd.component';
 import { DvdComponent } from './dvd/dvd.component';
+import { DatePipe } from '@angular/common';
+
+
 
 @NgModule({
   declarations: [
@@ -33,7 +36,7 @@ import { DvdComponent } from './dvd/dvd.component';
     CardComponent,
     CreationFormComponent,
     CdComponent,
-    DvdComponent,
+    DvdComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +45,9 @@ import { DvdComponent } from './dvd/dvd.component';
     MatIconModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

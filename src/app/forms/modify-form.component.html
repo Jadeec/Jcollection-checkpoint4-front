@@ -11,27 +11,28 @@
           formControlName="artist"
           class="artist form-control"
         />
-        
       </div>
       <div class="col-12 mb-2 mt-3">
         <label for="titre"> Titre </label>
       </div>
-      <div>
-        <input type="text" name="title" formControlName="title" class="title form-control" />
-      </div>
-      
+      <input
+        type="text"
+        name="title"
+        formControlName="title"
+        class="title form-control"
+      />
 
       <div class="col-12 mb-2 mt-3">
         <label for="genre"> Genre </label>
       </div>
 
-      <input type="text" name="genre" formControlName="genre" class="genre form-control" />
+      <input
+        type="text"
+        name="genre"
+        formControlName="genre"
+        class="genre form-control"
+      />
 
-      <div class="col-12 mb-2 mt-3">
-        <label for="type"> Type </label>
-      </div>
-      <input type="text" name="type" formControlName="type" class="genre form-control" placeholder="vinyl, cd ou dvd" />
-  
       <div class="col-12 mb-2 mt-3">
         <label for="publicationDate"> PublicationDate </label>
       </div>
@@ -39,7 +40,7 @@
         type="text"
         name="publicationDate"
         formControlName="publicationDate"
-        class=" form-control publicationDate mb-4"
+        class="form-control publicationDate mb-4"
       />
     </div>
     <div>
@@ -50,12 +51,12 @@
         type="text"
         name="description"
         formControlName="description"
-        class=" form-control description mb-4"
+        class="form-control description mb-4"
       />
     </div>
   </div>
 </form>
 
 <div class="footer d-flex justify-content-center">
-  <button class="saveBtn" (click)="addMedia()">Enregistrer</button>
+  <button class="saveBtn" (click)="modifyMedia()">Enregistrer</button>
 </div>

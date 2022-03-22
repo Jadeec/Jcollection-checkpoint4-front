@@ -9,28 +9,30 @@ import { MediaService } from '../shared/services/media.service';
   styleUrls: ['./vinyl.component.css'],
 })
 export class VinylComponent implements OnInit {
-  vinyl !: Media
-  constructor(private mediaService : MediaService, private router: Router, private route: ActivatedRoute,) {}
+  vinyl!: Media;
+  constructor(
+    private mediaService: MediaService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     //get selected vinyl id and display it
     const vinylId = this.route.snapshot.paramMap.get('vinylId');
-    if(vinylId != null){
+    if (vinylId != null) {
       this.mediaService.getMedia(vinylId).subscribe((vinyl) => {
         this.vinyl = vinyl;
-      })
-
+      });
     }
   }
 
-  modify(){
-    this.router.navigate(['/', 'modifyVinyl']);
+  modify() {
+    this.router.navigate(['/modifyMedia/'+this.vinyl.id]);
   }
-  delete(id :number){
+
+  delete(id: number) {
     this.mediaService.deleteMedia(id).subscribe((res) => {
-      this.router.navigate(['/', 'vinyls'])
+      this.router.navigate(['/', 'vinyls']);
     });
   }
-
-
 }
