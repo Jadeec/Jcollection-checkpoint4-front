@@ -15,16 +15,16 @@ export class MediaService {
 
   //create a media
   postMedia(
-    name: string,
     artist: string,
+    title:string,
     genre: string,
     publishingDate: Date,
     description: string,
-    type: Type
+    type: number
   ): Observable<Media> {
     return this.http.post<Media>(this.urlBack + 'medias', {
-      name: name,
       artist: artist,
+      title: title,
       genre: genre,
       publishingDate: publishingDate,
       description: description,
@@ -33,12 +33,12 @@ export class MediaService {
   }
 
   //get all medias
-  getMedias(): Observable<Media[]> {
-    return this.http.get<Media[]>(this.urlBack + 'medias');
+  getMedias(id : number): Observable<Media[]> {
+    return this.http.get<Media[]>(this.urlBack + 'medias/type/'+ id);
   }
 
   //get a media
-  getMedia(id: number): Observable<Media> {
+  getMedia(id: string): Observable<Media> {
     return this.http.get<Media>(this.urlBack + 'medias/' + id);
   }
 

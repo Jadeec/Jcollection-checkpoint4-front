@@ -16,6 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreationFormComponent } from './forms/creation-form.component';
+import { CdComponent } from './cd/cd.component';
+import { DvdComponent } from './dvd/dvd.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     VinylComponent,
     ModifyFormComponent,
     CardComponent,
+    CreationFormComponent,
+    CdComponent,
+    DvdComponent,
   ],
   imports: [
     BrowserModule,

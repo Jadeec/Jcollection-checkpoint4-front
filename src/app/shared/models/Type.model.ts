@@ -2,13 +2,13 @@ import { Media } from './Media.model';
 
 export class Type {
   private _name: string;
-  private _medias: Media | null;
+
   private _id: number;
 
-  constructor(name: string, medias: Media, id: number) {
+  constructor(name: string, id: number) {
     this._id = id;
     this._name = name;
-    this._medias = medias;
+    
   }
 
   /**
@@ -19,13 +19,7 @@ export class Type {
     return this._name;
   }
 
-  /**
-   * Getter medias
-   * @return {Media }
-   */
-  public get medias(): Media | null {
-    return this._medias;
-  }
+  
 
   /**
    * Setter name
@@ -33,14 +27,6 @@ export class Type {
    */
   public set name(value: string) {
     this._name = value;
-  }
-
-  /**
-   * Setter medias
-   * @param {Media } value
-   */
-  public set medias(value: Media | null) {
-    this._medias = value;
   }
 
   /**

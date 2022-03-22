@@ -1,0 +1,18 @@
+h1 {
+    margin-left: 5rem;
+    margin-top: 1.563rem;
+  }
+  
+  .saveBtn {
+    border: #edbf1c 1px solid;
+    background-color: transparent;
+    color: #edbf1c;
+    border-radius: 10px;
+    margin-right: 0.625rem;
+    padding: 1%;
+  }
+  
+  .description {
+    height: 3.125rem;
+  }
+  

@@ -1,1 +1,5 @@
-<p>dvds works!</p>
+<div class="mediaContainer d-flex flex-wrap">
+    <div *ngFor="let dvd of dvds">
+      <app-card [media]="dvd"></app-card>
+    </div>
+  </div>

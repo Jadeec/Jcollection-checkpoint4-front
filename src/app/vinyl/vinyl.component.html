@@ -2,13 +2,14 @@
   <div class="d-flex mt-3">
     <img src="./assets/img/vinyl.jpg" alt="vinyl cover" />
     <div class="d-flex flex-column artistInfo mt-3">
-      <h1 class="artist">Frank Ocean</h1>
-      <h2 class="title">Blond</h2>
+      <h1 class="artist">{{vinyl.artist}}</h1>
+      <h2 class="title">{{vinyl.title}} </h2>
     </div>
   </div>
   <div class="row albumInfo mt-3">
-    <p>Genre : Hip-Hop/ Funk</p>
-    <p>Année de parution: 2016</p>
+    <p>Genre : {{vinyl.genre}}</p>
+    <p>Année de parution: {{vinyl.publishingDate | date: 'dd/MM/yyyy' }}</p>
+    <p>Description : {{vinyl.description}} </p>
   </div>
   <div class="d-flex justify-content-end mt-3 buttons">
     <button (click)="modify()">Modifier</button>
