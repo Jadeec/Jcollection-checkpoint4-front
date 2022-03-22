@@ -16,7 +16,7 @@ export class MediaService {
   //create a media
   postMedia(
     artist: string,
-    title:string,
+    title: string,
     genre: string,
     publishingDate: Date,
     description: string,
@@ -33,8 +33,8 @@ export class MediaService {
   }
 
   //get all medias
-  getMedias(id : number): Observable<Media[]> {
-    return this.http.get<Media[]>(this.urlBack + 'medias/type/'+ id);
+  getMedias(id: number): Observable<Media[]> {
+    return this.http.get<Media[]>(this.urlBack + 'medias/type/' + id);
   }
 
   //get a media
@@ -45,23 +45,23 @@ export class MediaService {
   //modify media
   modifyMedia(
     id: number,
-    name: string,
+    title: string,
     artist: string,
     genre: string,
     publishingDate: Date,
     description: string
   ): Observable<Media> {
     return this.http.put<Media>(this.urlBack + 'medias/' + id, {
-      name: name,
+      title: title,
       artist: artist,
       genre: genre,
       publishingDate: publishingDate,
-      description: description
+      description: description,
     });
   }
 
-  //delete a media 
-  deleteMedia(id: number){
+  //delete a media
+  deleteMedia(id: number) {
     return this.http.delete<Media>(this.urlBack + 'medias/' + id);
   }
 }

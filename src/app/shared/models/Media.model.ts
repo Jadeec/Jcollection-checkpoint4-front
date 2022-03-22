@@ -5,7 +5,7 @@ export class Media {
   private _title: string;
   private _artist: string;
   private _genre: string;
-  private _publishingDate: Date | null;
+  private _publishingDate: string | null;
   private _description: string;
   private _type: Type;
 
@@ -14,7 +14,7 @@ export class Media {
     title: string,
     artist: string,
     genre: string,
-    publishingDate: Date | null,
+    publishingDate: string | null,
     description: string,
     type: Type
   ) {
@@ -47,9 +47,9 @@ export class Media {
 
   /**
    * Getter publishingDate
-   * @return {Date | null}
+   * @return {string | null}
    */
-  public get publishingDate(): Date | null {
+  public get publishingDate(): string | null {
     return this._publishingDate;
   }
 
@@ -103,9 +103,9 @@ export class Media {
 
   /**
    * Setter publishingDate
-   * @param {Date | null} value
+   * @param {string | null} value
    */
-  public set publishingDate(value: Date| null) {
+  public set publishingDate(value: string| null) {
     this._publishingDate = value;
   }
 
