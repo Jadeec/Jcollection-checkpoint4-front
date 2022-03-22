@@ -1,27 +1,119 @@
-# Checkpoint5
+<div id="top"></div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+   <h1> J Collection <h1>
+    <img src="src/assets/img/logo.png" alt="Logo" width="80" height="80">
+ 
+</div>
 
-## Development server
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#acknowledgments">Acknowledgments</a></li>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  </ol>
+</details>
 
-## Code scaffolding
+<!-- ABOUT THE PROJECT -->
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## About The Project
 
-## Build
+<img src="src/assets/ressources/homepageScreenshot.png" alt="screenshot" >
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Running unit tests
+### Built With
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Angular](https://angular.io/)
+- [Bootstrap](https://getbootstrap.com)
 
-## Running end-to-end tests
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<!-- GETTING STARTED -->
 
-## Further help
+## Getting Started
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get a local copy up and running follow these steps.
+
+### Prerequisites
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone git@github.com:WildCodeSchool/P3-jaffrebook-front-javangular-2021.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Launch application on localhost
+
+   ```sh
+   ng s -o
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+JCollection is an app that allows you to keep track for your collections (Vinyl, CD and DVD). Check, add, modify & delete items as much as you want ;)  
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+
+## Roadmap for next features
+
+- [ ] Collection display
+- [ ] Item info
+- [ ] Create & modify forms
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Jade CLAIRICIA - [LinkedIn](https://www.linkedin.com/in/jade-clairicia1/) - [GitHub](https://github.com/Jadeec)<br>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+- [Angular Material](https://material.angular.io/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[product-screenshot]: src/assets/ressources/homepageScreenshot.png
