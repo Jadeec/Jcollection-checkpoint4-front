@@ -1,1 +1,19 @@
-<p>cd works!</p>
+<div class="container">
+    <div class="d-flex mt-3">
+      <img src="./assets/img/cdImg.webp" alt="cd cover" />
+      <div class="d-flex flex-column artistInfo mt-3">
+        <h2 class="title">{{cd.title}} </h2>
+        <h1 class="artist">{{cd.artist}}</h1>
+      </div>
+    </div>
+    <div class="row albumInfo mt-3">
+      <p>Genre : {{cd.genre}}</p>
+      <p>Année de parution: {{cd.publishingDate | date: 'dd/MM/yyyy' }}</p>
+      <p>Description : {{cd.description}} </p>
+    </div>
+    <div class="d-flex justify-content-end mt-3 buttons">
+      <button (click)="modify()">Modifier</button>
+  
+      <button (click)="delete(cd.id)">Supprimer</button>
+    </div>
+  </div>

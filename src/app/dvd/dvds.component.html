@@ -1,5 +1,26 @@
-<div class="mediaContainer d-flex flex-wrap">
-    <div *ngFor="let dvd of dvds">
-      <app-card [media]="dvd"></app-card>
+<div class="container">
+  <form class="form-inline d-flex align-items-center justify-content-md-end">
+    <input
+      class="form-control mr-sm-2 searchBar"
+      type="search"
+      placeholder="Rechercher un album"
+      aria-label="Search"
+    />
+    <button class="btn searchBtn" type="submit">Rechercher</button>
+  </form>
+  <button class="addBtn" (click)="addDvd()">
+    <img class="addImg" src="./assets/img/vector.png" alt="add button" />
+  </button>
+  <div class="mediaContainer d-flex flex-wrap">
+      <div *ngFor="let dvd of dvds">
+        <app-card [media]="dvd"></app-card>
+      </div>
     </div>
-  </div>
+</div>
+
+
+
+
+
+
+

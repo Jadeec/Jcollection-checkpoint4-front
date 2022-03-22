@@ -1,1 +1,20 @@
-<p>dvd works!</p>
+<div class="container">
+    <div class="d-flex mt-3">
+      <img src="./assets/img/dvd.png" alt="dvd cover" />
+      <div class="d-flex flex-column artistInfo mt-3">
+        <h1 class="title">{{dvd.title}} </h1>
+        <h2 class="artist">{{dvd.artist}}</h2>
+      </div>
+    </div>
+    <div class="row albumInfo mt-3">
+      <p>Genre : {{ dvd.genre}}</p>
+      <p>Année de parution:  {{dvd.publishingDate | date: 'dd/MM/yyyy' }}</p>
+      <p>Description :  {{dvd.description}} </p>
+    </div>
+    <div class="d-flex justify-content-end mt-3 buttons">
+      <button (click)="modify()">Modifier</button>
+  
+      <button (click)="delete(dvd.id)">Supprimer</button>
+    </div>
+  </div>
+  
